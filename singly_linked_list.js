@@ -19,4 +19,22 @@ class SinglyLinkedList {
       this.tail = newNode;
     }
   }
+
+  addNodeAfter(data, targetNode) {
+    let current = this.head;
+    while (current) {
+      if (current.data === targetNode) {
+        const newNode = new Node(data);
+        if (current === this.tail) {
+          this.tail.next = newNode;
+          this.tail = newNode;
+        } else {
+          newNode.next = current.next;
+          current.next = newNode;
+          break;
+        }
+      }
+      current = current.next;
+    }
+  }
 }
