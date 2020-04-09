@@ -12,11 +12,11 @@ class SinglyLinkedList {
   addNode(data) {
     const newNode = new Node(data);
     if (!this.head) {
-      this.head = node;
-      this.tail = node;
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-      this.tail.next = node;
-      this.tail = node;
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
   }
 }
