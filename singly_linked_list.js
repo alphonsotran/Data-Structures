@@ -41,9 +41,8 @@ class SinglyLinkedList {
   removeNode(data) {
     let previous = this.head;
     let current = this.head;
-
     while (current) {
-      if (current === data) {
+      if (current.data === data) {
         if (current === this.head) {
           this.head = this.head.next;
         }
@@ -65,4 +64,4 @@ list.addNode(7);
 list.addNode(0);
 list.addNode(5);
 list.addNodeAfter(100, 5);
-console.log("list", list);
+list.removeNode(5);
