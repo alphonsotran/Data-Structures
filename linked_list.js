@@ -82,11 +82,3 @@ class DoubleLinkedList {
     }
   }
 }
-
-const list = new SinglyLinkedList();
-list.addNode(99);
-list.addNode(7);
-list.addNode(0);
-list.addNode(5);
-list.addNodeAfter(100, 5);
-list.removeNode(5);
