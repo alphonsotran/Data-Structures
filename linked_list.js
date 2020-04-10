@@ -58,6 +58,12 @@ class SinglyLinkedList {
   }
 }
 
+function DoubleNode(data) {
+  this.data = data;
+  this.next = null;
+  this.previous = null;
+}
+
 const list = new SinglyLinkedList();
 list.addNode(99);
 list.addNode(7);
