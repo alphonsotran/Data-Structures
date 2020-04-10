@@ -81,6 +81,7 @@ class DoubleLinkedList {
       this.tail.next = node;
       this.tail = node;
     }
+    this.length++;
   }
 
   insertAfter(data, targetNode) {
@@ -96,6 +97,7 @@ class DoubleLinkedList {
           node.previous = current;
           node.next = current.next;
           current.next = node;
+          this.length++;
         }
       }
       current = current.next;
