@@ -64,6 +64,13 @@ function DoubleNode(data) {
   this.previous = null;
 }
 
+class DoubleLinkedList {
+  constructor(props) {
+    this.head = null;
+    this.tail = null;
+  }
+}
+
 const list = new SinglyLinkedList();
 list.addNode(99);
 list.addNode(7);
