@@ -103,4 +103,28 @@ class DoubleLinkedList {
       current = current.next;
     }
   }
+
+  removeNode(data) {
+    let current = this.head;
+
+    while (current) {
+      if (current.data === data) {
+        if (current === this.head && current === this.tail) {
+          this.head = null;
+          this.tail = null;
+        } else if (current === this.head) {
+          this.head = this.head.next;
+          this.head.previous = null;
+        } else if (current === this.tail) {
+          this.tail = this.tail.previous;
+          this.tail.next = null;
+        } else {
+          current.previous.next = current.next;
+          current.next.previous = current.previous;
+        }
+        this.length--;
+      }
+      current = current.next;
+    }
+  }
 }
