@@ -1,8 +1,8 @@
 class Stack {
   constructor() {
-    this.count = 0
-    this.storage = {}
-    this.push = this.push.bind(this)
+    this.count = 0;
+    this.storage = {};
+    this.push = this.push.bind(this);
   }
 
   push(value) {
@@ -24,15 +24,6 @@ class Stack {
   }
 
   size() {
-    this.count
+    this.count;
   }
 }
-
-var stack1 = new Stack
-stack1.push(2)
-stack1.push('trent')
-stack1.push(5)
-stack1.push(7)
-stack1.pop()
-stack1.peek()
-stack1.size()
